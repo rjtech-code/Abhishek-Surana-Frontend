@@ -1,0 +1,170 @@
+/* components/home/ThankYouHero.css
+   Every keyframe animation used by the card. Emphasis words now use the
+   site-wide `.font-editorial` (Playfair Display italic) class from
+   src/index.css directly in the JSX — no custom cursive font here.
+   Everything respects prefers-reduced-motion. */
+
+/* ---------- Content stagger (icon+title / image / message) ---------- */
+@keyframes thankyouContentIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.thankyou-fade-item {
+  opacity: 0;
+  animation: thankyouContentIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.thankyou-fade-item.delay-1 {
+  animation-delay: 0.06s;
+}
+.thankyou-fade-item.delay-2 {
+  animation-delay: 0.16s;
+}
+.thankyou-fade-item.delay-3 {
+  animation-delay: 0.28s;
+}
+
+/* ---------- Event photo: fade in + slow Ken Burns zoom-out ---------- */
+@keyframes thankyouImageIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes thankyouKenBurns {
+  from {
+    transform: scale(1.09);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.thankyou-fade-img {
+  animation: thankyouImageIn 0.5s ease forwards,
+    thankyouKenBurns 2.8s ease-out forwards;
+}
+
+/* ---------- Icon badge pop ---------- */
+@keyframes thankyouIconPop {
+  0% {
+    transform: scale(0.4) rotate(-18deg);
+    opacity: 0;
+  }
+  65% {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+.thankyou-icon-pop {
+  animation: thankyouIconPop 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ---------- Floating quote note ---------- */
+@keyframes thankyouNoteIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) rotate(0deg) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(3deg) scale(1);
+  }
+}
+.thankyou-note {
+  animation: thankyouNoteIn 0.6s 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ---------- Auto-advance progress bar ---------- */
+@keyframes thankyouProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.thankyou-progress {
+  animation: thankyouProgress 2.8s linear forwards;
+}
+.thankyou-progress-paused {
+  animation-play-state: paused;
+}
+
+/* ---------- Small decorative sparkle / dash accents ---------- */
+@keyframes thankyouTwinkle {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+.thankyou-twinkle {
+  animation: thankyouTwinkle 2.4s ease-in-out infinite;
+}
+
+/* ---------- Gentle heartbeat on the little heart accent ---------- */
+@keyframes thankyouHeartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.18);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+.thankyou-heartbeat {
+  animation: thankyouHeartbeat 2.6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* ---------- DM Sir photo: soft float + slight tilt on hover ---------- */
+@keyframes thankyouFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.thankyou-photo-wrap {
+  animation: thankyouFloat 5s ease-in-out infinite;
+  transition: transform 0.4s ease;
+}
+.thankyou-photo-wrap:hover {
+  transform: rotate(-1.2deg) translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thankyou-fade-item,
+  .thankyou-fade-img,
+  .thankyou-icon-pop,
+  .thankyou-note,
+  .thankyou-progress,
+  .thankyou-twinkle,
+  .thankyou-heartbeat,
+  .thankyou-photo-wrap {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
