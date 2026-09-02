@@ -102,26 +102,165 @@ const VALUES = [
   real 20 once you have them, same shape: { name, grade, thought }.
 */
 const STUDENT_THOUGHTS = [
-  { name: "Mohit Darji", grade: "BS(IIT Madras) · Code Churu", thought: "DM Sir made us believe our ideas were worth building, not just dreaming about." },
-  { name: "Aashish Pareek", grade: "BS(IIT Madras) · Code Churu", thought: "I wrote my first line of code because of Code Churu. Now I want to build apps for my village." },
-  { name: "Mayank Sharma", grade: "BS(IIT Madras) · Code Churu", thought: "He listens to us like our ideas actually matter. That changes how you see yourself." },
-  { name: "Lakshmi Jangid", grade: "BS(IIT Madras) · Code Churu", thought: "From a shy student to presenting my own project on stage — this program did that." },
-  { name: "Zaahid Khan", grade: "BS(IIT Madras) · Code Churu", thought: "Thank you for showing us that Churu can build things the whole state notices." },
-  { name: "Ananya Rathi", grade: "Class 7 · Code Churu", thought: "I never thought a district could feel this close to its students until Code Churu." },
-  { name: "Devansh Purohit", grade: "Class 9 · Code Churu", thought: "He turned our sketches on paper into something that actually runs. That's rare." },
-  { name: "Sanya Kumawat", grade: "Class 8 · Code Churu", thought: "Every session felt like someone was investing in our future, not just teaching a class." },
-  { name: "Vivaan Soni", grade: "Class 10 · Code Churu", thought: "I built my first website this year. My whole family came to see it." },
-  { name: "Riya Pareek", grade: "Class 9 · Code Churu", thought: "DM Sir's visits weren't inspections, they felt like a mentor checking on us." },
-  { name: "Aryan Bishnoi", grade: "Class 7 · Code Churu", thought: "Big dreams deserve big support — and Churu finally gave us that." },
-  { name: "Tanvi Godara", grade: "Class 8 · Code Churu", thought: "I used to think coding was for big cities. Now I know it's for Churu too." },
-  { name: "Yuvraj Swami", grade: "Class 10 · Code Churu", thought: "He gave us the confidence to turn ideas into working projects, not just homework." },
-  { name: "Mahi Acharya", grade: "Class 9 · Code Churu", thought: "Our district feels different now — like it's building its own future, one student at a time." },
-  { name: "Karan Beniwal", grade: "Class 8 · Code Churu", thought: "I finally understood that innovation doesn't need a big city, just the right support." },
-  { name: "Diya Vyas", grade: "Class 7 · Code Churu", thought: "Thank you for treating students like builders, not just learners." },
-  { name: "Naman Chhabra", grade: "Class 10 · Code Churu", thought: "The confidence I gained here is bigger than any project I built." },
-  { name: "Pihu Ranga", grade: "Class 9 · Code Churu", thought: "DM Sir's belief in us pushed me to try things I was too scared to attempt before." },
-  { name: "Reyansh Godha", grade: "Class 8 · Code Churu", thought: "Code Churu didn't just teach us skills, it taught us that Churu believes in us." },
-  { name: "Anvi Sethiya", grade: "Class 10 · Code Churu", thought: "From a sketch on paper to something that actually runs — that's the story of my year." },
+  {
+    name: "Mohit Darji",
+    role: "Founder · MEET-AI",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "Code Churu gave me the skills and confidence to turn a real problem into a technology-driven startup idea."
+  },
+
+  {
+    name: "Lakshmi Jangid",
+    role: "Founder · Fisto Up",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "This journey showed me that even ideas rooted in our local communities can become meaningful digital solutions."
+  },
+
+  {
+    name: "Aashish Kumar",
+    role: "Founder · Vultus-Go",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "The opportunity to build with technology made me believe that students from Churu can solve problems at a much bigger scale."
+  },
+
+  {
+    name: "Mayank Maharshi",
+    role: "Co-Founder · Vultus-Go",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "Code Churu helped me move from simply learning technology to actually using it to create something useful."
+  },
+
+  {
+    name: "Zaahid Khan",
+    role: "Founder · WedStor",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "The biggest change was the confidence to take an idea seriously and imagine it as something people could actually use."
+  },
+
+  {
+    name: "Neha Goyal",
+    role: "Founder · Nehu (DNB & CO.)",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "Having the right guidance made technology feel accessible and gave me the confidence to explore my own ideas."
+  },
+
+  {
+    name: "Narpat Singh",
+    role: "Founder · QuickAmbu",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "The bootcamp taught us to look around, identify real problems and think about practical solutions."
+  },
+
+  {
+    name: "Laxmi Kumari",
+    role: "Founder · Pushpance",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "It was inspiring to see how an ordinary problem could become the starting point for an innovative idea."
+  },
+
+  {
+    name: "Arati",
+    role: "Founder · Aryansh Agritech",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "Code Churu gave us an environment where experimenting with ideas felt possible and exciting."
+  },
+
+  {
+    name: "Shiva",
+    role: "Founder · LocaStay",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "I learned that building a startup starts with understanding a problem properly and having the courage to solve it."
+  },
+
+  {
+    name: "Ankit Kumar",
+    role: "Founder · PartLoop",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "The experience helped me think beyond a classroom project and understand how technology can solve everyday problems."
+  },
+
+  {
+    name: "Deepika",
+    role: "Founder · CarePlus",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "The mentorship and exposure helped us see technology as a tool for creating real impact around us."
+  },
+
+  {
+    name: "Ankit Prajapati",
+    role: "Founder · Student Mirror",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "Working on a real startup idea taught me more about problem-solving, teamwork and responsibility than a normal assignment could."
+  },
+
+  {
+    name: "Kavita",
+    role: "Founder · LokArt",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "It made me realise that local talent and local ideas can reach a much wider audience with the right technology."
+  },
+
+  {
+    name: "Jitender",
+    role: "Founder · Verdora",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "The bootcamp encouraged us to look at challenges around us as opportunities to create something better."
+  },
+
+  {
+    name: "Satish Kumar",
+    role: "Founder · Agri-X",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "Learning to combine technology with a real-world problem changed the way I think about innovation."
+  },
+
+  {
+    name: "Tejash",
+    role: "Founder · QuesGen-AI",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "Code Churu gave us the freedom to explore ideas, experiment with AI and think like young problem-solvers."
+  },
+
+  {
+    name: "Eshwar",
+    role: "Founder · RozWork",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "The journey taught me that a startup doesn't have to begin with a big team or big resources — it can begin with one useful idea."
+  },
+
+  {
+    name: "Dhanraj Suthar",
+    role: "Founder · CraftoFy",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "The opportunity to build and present our own idea gave us a completely different level of confidence."
+  },
+
+  {
+    name: "Himanshu",
+    role: "Founder · Yantra Kisan",
+    grade: "Code Churu · Innovate Churu Bootcamp",
+    thought:
+      "The bootcamp showed us that technology can be used to make even traditional sectors more accessible and efficient."
+  },
 ];
 
 /* ============================================================================
@@ -207,7 +346,7 @@ function Hero() {
 
   return (
     <section
-    
+
       style={{
         position: "relative",
         background: `linear-gradient(180deg, ${COLORS.sage} 0%, ${COLORS.cream} 65%)`,

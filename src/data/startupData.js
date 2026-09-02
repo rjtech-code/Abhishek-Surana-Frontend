@@ -1,292 +1,456 @@
-// Real bootcamp startup data.
-// `logoImage` (per startup) and each team member's `image` are left empty ("") —
-// drop in the real uploaded logo/photo URL or import path and it'll show up
-// automatically. Until then, the UI falls back to a cute initials badge, so
-// nothing breaks and nothing looks like a placeholder icon or emoji.
-// The shape of each object stays exactly the same, so you can fill images in
-// one by one without touching BootcampStartups.jsx.
-
 export const startupData = [
   {
     id: 1,
-    name: "AgriSmart",
-    tagline: "Smarter Fields, Richer Harvests",
-    category: "AgriTech",
+    name: "MEET-AI",
+    tagline: "Smarter Meetings, Better Attendance",
+    category: "EdTech",
     color: "violet",
-    logoImage: "/images/startups/FistoUp.png",
+    logoImage: "/images/startups/meet-ai.png",
     description:
-      "AgriSmart farmers ko mitti ki quality aur mausam ke hisaab se fasal ka sahi salah deta hai, taaki kam paani aur kam kharcha mein zyada upaj mile.",
+      "MEET-AI is a professional online meeting platform that integrates video conferencing with advanced attendance management, participant tracking, scheduling, and secure collaboration features.",
     team: [
-      { name: "Aditya Rathi", role: "Founder", image: "/dm-sir.png" },
-      { name: "Meera Choudhary", role: "Co-Founder", image: "/dm-sir.png" },
+      {
+        name: "Mohit Darji",
+        role: "Founder",
+        image: "/images/Founders/mohit.png",
+      },
     ],
   },
+
   {
     id: 2,
-    name: "PadhAI",
-    tagline: "Learning Made for Every Village",
-    category: "EdTech",
-    color: "blue",
-    logoImage: "/images/startups/FistoUp.png",
-    description:
-      "PadhAI Hindi-medium students ke liye AI se personalised practice questions aur doubt-solving deta hai, wo bhi bina internet ke low-end phones par.",
-    team: [
-      { name: "Kabir Singh", role: "Founder", image: "/dm-sir.png" },
-      { name: "Ishita Sharma", role: "Co-Founder", image: "/dm-sir.png" },
-    ],
-  },
-  {
-    id: 3,
-    name: "EcoPack",
-    tagline: "Packaging that Protects the Planet",
-    category: "Sustainability",
-    color: "green",
-    logoImage: "/images/startups/FistoUp.png",
-    description:
-      "EcoPack local dukaandaaro ko biodegradable packaging affordable daam par deta hai, taaki plastic waste kam ho aur small businesses eco-friendly ban sake.",
-    team: [
-      { name: "Rohan Vyas", role: "Founder", image: "/dm-sir.png" },
-      { name: "Simran Kaur", role: "Co-Founder", image: "/dm-sir.png" },
-      { name: "Devansh Joshi", role: "Co-Founder", image: "/dm-sir.png" },
-    ],
-  },
-  {
-    id: 4,
-    name: "MedEase",
-    tagline: "Healthcare, Just a Tap Away",
-    category: "HealthTech",
-    color: "teal",
-    logoImage: "/images/startups/FistoUp.png",
-    description:
-      "MedEase rural clinics ko ek simple app se jodta hai jisse patient records, appointment aur medicine stock sab digital ho jaata hai.",
-    team: [
-      { name: "Aarushi Mehta", role: "Founder", image: "/dm-sir.png" },
-      { name: "Yash Poonia", role: "Co-Founder", image: "/dm-sir.png" },
-    ],
-  },
-  {
-    id: 5,
-    name: "QuickCart",
-    tagline: "Smart Shopping, Swift Delivery",
-    category: "E-Commerce & Logistics",
-    color: "orange",
-    logoImage: "/images/startups/FistoUp.png",
-    description:
-      "QuickCart ek smart e-commerce platform hai jo local products ko fast delivery ke saath customers tak pahunchata hai.",
-    team: [
-      { name: "Aarav Sharma", role: "Founder", image: "/dm-sir.png" },
-      { name: "Riya Singh", role: "Co-Founder", image: "/dm-sir.png" },
-      { name: "Kunal Verma", role: "Co-Founder", image: "/dm-sir.png" },
-    ],
-  },
-  {
-    id: 6,
-    name: "SkillBridge",
-    tagline: "Bridging Talent to Opportunity",
-    category: "Workforce",
-    color: "coral",
-    logoImage: "/images/startups/FistoUp.png",
-    description:
-      "SkillBridge chhote shehron ke skilled youth ko verified employers se seedha connect karta hai, bina kisi bichole ke.",
-    team: [
-      { name: "Naveen Beniwal", role: "Founder", image: "/dm-sir.png" },
-      { name: "Pooja Saini", role: "Co-Founder", image: "/dm-sir.png" },
-    ],
-  },
-  {
-    id: 7,
-    name: "Prakriti",
-    tagline: "Rooted in Nature, Built for Tomorrow",
-    category: "GreenTech",
-    color: "green",
-    logoImage: "/images/startups/FistoUp.png",
-    description:
-      "Prakriti households ko solar aur composting solutions ke through apna carbon footprint kam karne mein madad karta hai.",
-    team: [
-      { name: "Ananya Deora", role: "Founder", image: "/dm-sir.png" },
-      { name: "Vivaan Kaswan", role: "Co-Founder", image: "/dm-sir.png" },
-    ],
-  },
-  {
-    id: 8,
-    name: "StudyBuddy",
-    tagline: "Your Companion for Every Exam",
-    category: "EdTech",
-    color: "indigo",
-    logoImage: "/images/startups/FistoUp.png",
-    description:
-      "StudyBuddy competitive exams ki taiyari karne wale students ke liye chhote-chhote daily quizzes aur peer study groups banata hai.",
-    team: [
-      { name: "Diya Kanwar", role: "Founder", image: "/dm-sir.png" },
-      { name: "Arjun Godara", role: "Co-Founder", image: "/dm-sir.png" },
-    ],
-  },
-  {
-    id: 9,
-    name: "ShareSetu",
-    tagline: "Connecting Communities, One Ride at a Time",
-    category: "Mobility",
-    color: "blue",
-    logoImage: "/images/startups/FistoUp.png",
-    description:
-      "ShareSetu chhote shehron mein carpooling aur shared autos ko ek app par la kar rozana ke aane-jaane ka kharcha aadha kar deta hai.",
-    team: [
-      { name: "Harsh Pilania", role: "Founder", image: "/dm-sir.png" },
-      { name: "Nitya Bhadu", role: "Co-Founder", image: "/dm-sir.png" },
-    ],
-  },
-  {
-    id: 10,
-    name: "KhetKhata",
-    tagline: "Every Farm's Digital Ledger",
-    category: "AgriTech",
-    color: "violet",
-    logoImage: "/images/startups/FistoUp.png",
-    description:
-      "KhetKhata farmers ko unki fasal, kharch aur kamai ka simple digital hisaab rakhne deta hai, wo bhi voice input ke saath.",
-    team: [
-      { name: "Manav Chhimpa", role: "Founder", image: "/dm-sir.png" },
-      { name: "Bhavya Sihag", role: "Co-Founder", image: "/dm-sir.png" },
-    ],
-  },
-  {
-    id: 11,
-    name: "SafeNaari",
-    tagline: "Safety First, Always",
-    category: "Safety Tech",
-    color: "coral",
-    logoImage: "/images/startups/FistoUp.png",
-    description:
-      "SafeNaari ek panic-button app hai jo ek tap mein family aur nearby volunteers ko live location bhej deta hai.",
-    team: [
-      { name: "Kritika Bishnoi", role: "Founder", image: "/dm-sir.png" },
-      { name: "Rudra Pareek", role: "Co-Founder", image: "/dm-sir.png" },
-    ],
-  },
-  {
-    id: 12,
-    name: "GreenGram",
-    tagline: "Waste to Worth",
-    category: "Sustainability",
-    color: "green",
-    logoImage: "/images/startups/FistoUp.png",
-    description:
-      "GreenGram gaanv ke organic waste ko collect kar ke usse compost mein badal deta hai aur seedha farmers ko bechta hai.",
-    team: [
-      { name: "Ishaan Rathore", role: "Founder", image: "/dm-sir.png" },
-      { name: "Tanvi Rajpurohit", role: "Co-Founder", image: "/dm-sir.png" },
-    ],
-  },
-  {
-    id: 13,
-    name: "HunarHub",
-    tagline: "Every Craft Deserves a Market",
+    name: "Fisto Up",
+    tagline: "Taking Local Products to Wider Markets",
     category: "Marketplace",
     color: "orange",
     logoImage: "/images/startups/FistoUp.png",
     description:
-      "HunarHub local artisans aur SHG women ke haathon se bane products ko ek online marketplace deta hai, seedha shehri buyers tak.",
+      "Fisto Up is an e-commerce platform designed to enable local producers and artisans to promote and sell their products to a broader customer base.",
     team: [
-      { name: "Saanvi Godha", role: "Founder", image: "/dm-sir.png" },
-      { name: "Lakshay Bhati", role: "Co-Founder", image: "/dm-sir.png" },
+      {
+        name: "Lakshmi Jangid",
+        role: "Founder",
+        image: "/images/Founders/lakshmi.png",
+      },
+      {
+        name: "Tansukh",
+        role: "Co-Founder",
+        image: "/images/Founders/tanshuk.png",
+      },
     ],
   },
+
   {
-    id: 14,
-    name: "SeedTrack",
-    tagline: "Trace It Back to the Root",
-    category: "AgriTech",
-    color: "teal",
-    logoImage: "/images/startups/FistoUp.png",
-    description:
-      "SeedTrack beej se lekar mandi tak, fasal ki poori supply chain ko track karta hai taaki farmers ko sahi daam mile.",
-    team: [
-      { name: "Reyansh Ranga", role: "Founder", image: "/dm-sir.png" },
-      { name: "Avni Purohit", role: "Co-Founder", image: "/dm-sir.png" },
-    ],
-  },
-  {
-    id: 15,
-    name: "JalRakshak",
-    tagline: "Every Drop Counts",
-    category: "WaterTech",
-    color: "blue",
-    logoImage: "/images/startups/FistoUp.png",
-    description:
-      "JalRakshak ek low-cost sensor hai jo ghar aur khet mein paani ki barbadi ko real-time mein track kar ke alert bhejta hai.",
-    team: [
-      { name: "Om Prakash Saran", role: "Founder", image: "/dm-sir.png" },
-      { name: "Nandini Chaudhary", role: "Co-Founder", image: "/dm-sir.png" },
-    ],
-  },
-  {
-    id: 16,
-    name: "SolarSathi",
-    tagline: "Power for Every Home",
-    category: "CleanEnergy",
-    color: "orange",
-    logoImage: "/images/startups/FistoUp.png",
-    description:
-      "SolarSathi gaanv ke ghar-ghar tak affordable solar kits pahunchata hai, EMI ke saath, bina kisi bank ke chakkar ke.",
-    team: [
-      { name: "Vihaan Dadhich", role: "Founder", image: "/dm-sir.png" },
-      { name: "Priya Ola", role: "Co-Founder", image: "/dm-sir.png" },
-    ],
-  },
-  {
-    id: 17,
-    name: "BachatBox",
-    tagline: "Small Savings, Big Dreams",
-    category: "FinTech",
+    id: 3,
+    name: "Vultus-Go",
+    tagline: "AI-Powered Attendance Recognition",
+    category: "AI & Automation",
     color: "indigo",
-    logoImage: "/images/startups/FistoUp.png",
+    logoImage: "/images/startups/vultus-go.png",
     description:
-      "BachatBox SHG groups ko unki chhoti bachat ko manage karne aur micro-loans lene ke liye ek simple digital khata deta hai.",
+      "Vultus-Go is an AI-powered facial recognition attendance system designed to automatically record attendance through cameras and reduce manual processes.",
     team: [
-      { name: "Kavya Sankhla", role: "Founder", image: "/dm-sir.png" },
-      { name: "Dev Bhambhu", role: "Co-Founder", image: "/dm-sir.png" },
+      {
+        name: "Aashish Kumar",
+        role: "Founder",
+        image: "/images/Founders/aashish.png",
+      },
+      {
+        name: "Mayank Maharshi",
+        role: "Co-Founder",
+        image: "/images/Founders/mayank.png",
+      },
     ],
   },
+
   {
-    id: 18,
-    name: "ReCycle",
-    tagline: "Old Things, New Purpose",
+    id: 4,
+    name: "Nehu (DNB & CO.)",
+    tagline: "Creating Opportunities from Anywhere",
+    category: "Women Empowerment",
+    color: "coral",
+    logoImage: "/images/startups/nehu.png",
+    description:
+      "Nehu focuses on work-from-home opportunities in education and healthcare through virtual teaching and medical consultation services.",
+    team: [
+      {
+        name: "Neha Goyal",
+        role: "Founder",
+        image: "/images/Founders/neha.png",
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    name: "QuickAmbu",
+    tagline: "Emergency Care, Faster",
+    category: "HealthTech",
+    color: "teal",
+    logoImage: "/images/startups/quickambu.png",
+    description:
+      "QuickAmbu is a mobile and web-based ambulance booking and live-tracking platform designed to improve emergency veterinary healthcare access in rural areas.",
+    team: [
+      {
+        name: "Narpat Singh",
+        role: "Founder",
+        image: "/images/Founders/narpat.png",
+      },
+      {
+        name: "Himesh Singh",
+        role: "Co-Founder",
+        image: "/images/Founders/himesh.png",
+      },
+      {
+        name: "Sarwar Singh",
+        role: "Co-Founder",
+        image: "/images/Founders/sarwar.png",
+      },
+    ],
+  },
+
+  {
+    id: 6,
+    name: "Pushpance",
+    tagline: "Turning Flower Waste into Value",
     category: "Sustainability",
     color: "green",
-    logoImage: "/images/startups/FistoUp.png",
+    logoImage: "/images/startups/pushpance.png",
     description:
-      "ReCycle purani cheezon ko ek app ke through exchange ya resell karna aasan banata hai, taaki kam saaman kachre mein jaaye.",
+      "Pushpance converts flower waste from temples, events, and markets into useful products such as incense sticks, organic compost, and decorative products.",
     team: [
-      { name: "Shaurya Beniwal", role: "Founder", image: "/dm-sir.png" },
-      { name: "Anushka Kumawat", role: "Co-Founder", image: "/dm-sir.png" },
+      {
+        name: "Laxmi Kumari",
+        role: "Founder",
+        image: "/images/Founders/laxmi.png",
+      },
+      {
+        name: "Mahima Jangid",
+        role: "Co-Founder",
+        image: "/images/Founders/mahima.png",
+      },
     ],
   },
+
+  {
+    id: 7,
+    name: "Aryansh Agritech",
+    tagline: "Smart Technology for Better Soil",
+    category: "AgriTech",
+    color: "green",
+    logoImage: "/images/startups/aryansh-agritech.png",
+    description:
+      "Aryansh Agritech focuses on smart monitoring of temperature and soil moisture to create suitable conditions for earthworms and support healthier, more productive soil.",
+    team: [
+      {
+        name: "Arati",
+        role: "Founder",
+        image: "/images/Founders/arati.png",
+      },
+      {
+        name: "Jaishree Prajapat",
+        role: "Co-Founder",
+        image: "/images/Founders/jai.png",
+      },
+      {
+        name: "Dhapa",
+        role: "Co-Founder",
+        image: "/images/Founders/dhapa.png",
+      },
+    ],
+  },
+
+  {
+    id: 8,
+    name: "LocaStay",
+    tagline: "Finding the Right Place, Made Simple",
+    category: "PropTech",
+    color: "blue",
+    logoImage: "/images/startups/locastay.png",
+    description:
+      "LocaStay is an online rental platform connecting tenants with property owners through a transparent and user-friendly accommodation search system.",
+    team: [
+      {
+        name: "Shiva",
+        role: "Founder",
+        image: "/images/Founders/shiva.png",
+      },
+      {
+        name: "Himanshu",
+        role: "Co-Founder",
+        image: "/images/Founders/him.png",
+      },
+    ],
+  },
+
+  {
+    id: 9,
+    name: "PartLoop",
+    tagline: "Giving Pre-Owned Products a New Life",
+    category: "Marketplace",
+    color: "orange",
+    logoImage: "/images/startups/partloop.png",
+    description:
+      "PartLoop is a digital marketplace enabling secure buying, selling, and exchange of pre-owned products within local communities.",
+    team: [
+      {
+        name: "Ankit Kumar",
+        role: "Founder",
+        image: "/images/Founders/ankit2.png",
+      },
+      {
+        name: "Shyam Sunder",
+        role: "Co-Founder",
+        image: "/images/Founders/shyam.png",
+      },
+    ],
+  },
+
+  {
+    id: 10,
+    name: "CarePlus",
+    tagline: "Better Emergency Care for Animals",
+    category: "HealthTech",
+    color: "teal",
+    logoImage: "/images/startups/careplus.png",
+    description:
+      "CarePlus is a mobile and web-based ambulance booking and live-tracking platform for veterinary emergency services in rural areas.",
+    team: [
+      {
+        name: "Deepika",
+        role: "Founder",
+        image: "/images/Founders/deepika.png",
+      },
+      {
+        name: "Parmeshwari",
+        role: "Co-Founder",
+        image: "/images/Founders/param.png",
+      },
+      {
+        name: "Neelam",
+        role: "Co-Founder",
+        image: "/images/Founders/neelam.png",
+      },
+    ],
+  },
+
+  {
+    id: 11,
+    name: "Student Mirror",
+    tagline: "Connecting Parents with Student Progress",
+    category: "EdTech",
+    color: "indigo",
+    logoImage: "/images/startups/student-mirror.png",
+    description:
+      "Student Mirror is a real-time student monitoring and progress-tracking platform for schools and parents.",
+    team: [
+      {
+        name: "Ankit Prajapati",
+        role: "Founder",
+        image: "/images/Founders/ankit.png",
+      },
+      {
+        name: "Murlidhar Tiwari",
+        role: "Co-Founder",
+        image: "/images/Founders/murli.png",
+      },
+      {
+        name: "Ashok",
+        role: "Co-Founder",
+        image: "/images/Founders/ashok.png",
+      },
+    ],
+  },
+
+  {
+    id: 12,
+    name: "LokArt",
+    tagline: "Local Art, Wider Markets",
+    category: "Marketplace",
+    color: "coral",
+    logoImage: "/images/startups/lokart.png",
+    description:
+      "LokArt is an online marketplace dedicated to promoting and selling locally produced handmade products while supporting rural artisans and traditional crafts.",
+    team: [
+      {
+        name: "Kavita",
+        role: "Founder",
+        image: "/images/Founders/kavita.png",
+      },
+      {
+        name: "Anita",
+        role: "Co-Founder",
+        image: "/images/Founders/anita.png",
+      },
+      {
+        name: "Nikita",
+        role: "Co-Founder",
+        image: "/images/Founders/nikita.png",
+      },
+    ],
+  },
+
+  {
+    id: 13,
+    name: "Verdora",
+    tagline: "Fresh Produce, Delivered Better",
+    category: "AgriTech",
+    color: "green",
+    logoImage: "/images/startups/verdora.png",
+    description:
+      "Verdora is an online fresh produce ordering and doorstep delivery platform connecting customers with local vendors.",
+    team: [
+      {
+        name: "Jitender",
+        role: "Founder",
+        image: "/images/Founders/jitendra.png",
+      },
+      {
+        name: "Yuvraj",
+        role: "Co-Founder",
+        image: "/images/Founders/yuvraj.png",
+      },
+      {
+        name: "Chhaganlal",
+        role: "Co-Founder",
+        image: "/images/Founders/chhaganlal.png",
+      },
+    ],
+  },
+
+  {
+    id: 14,
+    name: "Agri-X",
+    tagline: "AI for Healthier Crops",
+    category: "AgriTech",
+    color: "teal",
+    logoImage: "/images/startups/agri-x.png",
+    description:
+      "Agri-X is an AI-powered Crop Doctor platform that helps farmers detect crop diseases, monitor crop health, and receive real-time recommendations.",
+    team: [
+      {
+        name: "Satish Kumar",
+        role: "Founder",
+        image: "/images/Founders/satish-kumar.png",
+      },
+    ],
+  },
+
+  {
+    id: 15,
+    name: "QuesGen-AI",
+    tagline: "Personalized Practice with AI",
+    category: "AI & EdTech",
+    color: "violet",
+    logoImage: "/images/startups/quesgen-ai.png",
+    description:
+      "QuesGen-AI is an AI-driven platform that generates customized practice papers and mock tests based on students' learning levels and subjects.",
+    team: [
+      {
+        name: "Tejash",
+        role: "Founder",
+        image: "/images/Founders/tejash.png",
+      },
+    ],
+  },
+
+  {
+    id: 16,
+    name: "RozWork",
+    tagline: "Connecting People with Local Work",
+    category: "Employment Tech",
+    color: "orange",
+    logoImage: "/images/startups/rozwork.png",
+    description:
+      "RozWork is a labor booking platform connecting customers with skilled and unskilled local workers through a mobile application.",
+    team: [
+      {
+        name: "Eshwar",
+        role: "Founder",
+        image: "/images/Founders/eshawar.png",
+      },
+      {
+        name: "Rahul Saroha",
+        role: "Co-Founder",
+        image: "/images/Founders/rahul-saroha.png",
+      },
+    ],
+  },
+
+  {
+    id: 17,
+    name: "CraftoFy",
+    tagline: "Find the Right Professional",
+    category: "Marketplace",
+    color: "coral",
+    logoImage: "/images/startups/craftofy.png",
+    description:
+      "CraftoFy is a digital marketplace connecting customers with interior designers, engineers, and skilled professionals.",
+    team: [
+      {
+        name: "Dhanraj Suthar",
+        role: "Founder",
+        image: "/images/Founders/dhanraj-suthar.png",
+      },
+    ],
+  },
+
+  {
+    id: 18,
+    name: "Yantra Kisan",
+    tagline: "Agricultural Machinery, Made Accessible",
+    category: "AgriTech",
+    color: "green",
+    logoImage: "/images/startups/yantra-kisan.png",
+    description:
+      "Yantra Kisan is an online platform for renting and booking agricultural machinery and equipment, helping farmers access farm technology without high ownership costs.",
+    team: [
+      {
+        name: "Himanshu",
+        role: "Founder",
+        image: "/images/Founders/himanshu.png",
+      },
+      {
+        name: "Prince",
+        role: "Co-Founder",
+        image: "/images/Founders/prince.png",
+      },
+    ],
+  },
+
   {
     id: 19,
-    name: "GaonNet",
-    tagline: "Connectivity for the Last Mile",
-    category: "ConnectivityTech",
-    color: "blue",
-    logoImage: "/images/startups/FistoUp.png",
+    name: "WedStor",
+    tagline: "Your Wedding, Simplified",
+    category: "EventTech",
+    color: "indigo",
+    logoImage: "/images/startups/wedstor.png",
     description:
-      "GaonNet un gaanvo tak low-cost mesh internet pahunchata hai jahan mobile network kamzor hai, taaki online padhai band na ho.",
+      "WedStor is a comprehensive event management and wedding services platform integrating planning, vendor management, and event-related shopping.",
     team: [
-      { name: "Karan Chhipa", role: "Founder", image: "/dm-sir.png" },
-      { name: "Muskan Suthar", role: "Co-Founder", image: "/dm-sir.png" },
+      {
+        name: "Zaahid Khan",
+        role: "Founder",
+        image: "/images/Founders/zaahid-khan.png",
+      },
     ],
   },
+
   {
     id: 20,
-    name: "KalaKriti",
-    tagline: "Where Tradition Meets Technology",
-    category: "Creative Tech",
+    name: "Beauty & Click",
+    tagline: "Beauty Services, Just a Click Away",
+    category: "BeautyTech",
     color: "coral",
-    logoImage: "/images/startups/FistoUp.png",
+    logoImage: "/images/startups/beauty-and-click.png",
     description:
-      "KalaKriti Rajasthani folk artists ke liye AI-assisted design tools banata hai, taaki unki kala digital duniya mein bhi zinda rahe.",
+      "Beauty & Click is an online platform for discovering and booking professional makeup artists and beauty professionals.",
     team: [
-      { name: "Aarohi Nain", role: "Founder", image: "/dm-sir.png" },
-      { name: "Rajveer Solanki", role: "Co-Founder", image: "/dm-sir.png" },
+      {
+        name: "Kiran Rao",
+        role: "Founder",
+        image: "/images/Founders/keeran-rao.png",
+      },
     ],
   },
 ];
