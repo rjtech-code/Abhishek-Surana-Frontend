@@ -671,20 +671,18 @@ export default function InitiativeEditor() {
 function PublishToggle({ published, onChange }) {
   return (
     <section
-      className={`rounded-[30px] border p-5 shadow-[0_20px_60px_rgba(7,60,50,0.06)] transition-colors ${
-        published
+      className={`rounded-[30px] border p-5 shadow-[0_20px_60px_rgba(7,60,50,0.06)] transition-colors ${published
           ? "border-[#0d5c4a]/25 bg-[#0d5c4a]/[0.04]"
           : "border-[#b99350]/30 bg-[#b99350]/[0.06]"
-      }`}
+        }`}
     >
       <div className="flex items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <span
-            className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors ${
-              published
+            className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors ${published
                 ? "bg-[#0d5c4a] text-white"
                 : "bg-[#b99350] text-white"
-            }`}
+              }`}
           >
             {published ? (
               <Eye size={15} />
@@ -710,14 +708,12 @@ function PublishToggle({ published, onChange }) {
           role="switch"
           aria-checked={published}
           onClick={() => onChange(!published)}
-          className={`relative h-7 w-12 flex-shrink-0 rounded-full transition-colors duration-300 ${
-            published ? "bg-[#0d5c4a]" : "bg-[#101614]/15"
-          }`}
+          className={`relative inline-flex h-6 w-11 flex-shrink-0 items-center rounded-full transition-colors duration-300 ${published ? "bg-[#0d5c4a]" : "bg-[#101614]/20"
+            }`}
         >
           <span
-            className={`absolute top-1 h-5 w-5 rounded-full bg-white shadow-md transition-transform duration-300 ${
-              published ? "translate-x-6" : "translate-x-1"
-            }`}
+            className={`inline-block h-5 w-5 transform rounded-full bg-white shadow-md transition-transform duration-300 ${published ? "translate-x-5" : "translate-x-0.5"
+              }`}
           />
         </button>
       </div>
@@ -833,11 +829,10 @@ function GalleryUploader({
         onDrop={onDrop}
         onDragOver={onDragOver}
         onDragLeave={onDragLeave}
-        className={`mt-4 flex min-h-[130px] w-full flex-col items-center justify-center rounded-2xl border border-dashed transition ${
-          dragging
+        className={`mt-4 flex min-h-[130px] w-full flex-col items-center justify-center rounded-2xl border border-dashed transition ${dragging
             ? "border-[#d5b978] bg-[#e8d8b7]/30"
             : "border-[#101614]/15 bg-[#f4f1e9] hover:border-[#d5b978]"
-        }`}
+          }`}
       >
         <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-sm">
           <Upload
@@ -939,11 +934,10 @@ function UploadZone({
       onDrop={onDrop}
       onDragOver={onDragOver}
       onDragLeave={onDragLeave}
-      className={`mt-5 flex min-h-[225px] w-full flex-col items-center justify-center rounded-2xl border border-dashed px-5 text-center transition ${
-        dragging
+      className={`mt-5 flex min-h-[225px] w-full flex-col items-center justify-center rounded-2xl border border-dashed px-5 text-center transition ${dragging
           ? "border-[#d5b978] bg-[#e8d8b7]/30"
           : "border-[#101614]/15 bg-[#f4f1e9] hover:border-[#d5b978]"
-      }`}
+        }`}
     >
       <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm">
         <Upload
