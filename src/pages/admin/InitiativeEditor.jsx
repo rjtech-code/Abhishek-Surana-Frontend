@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import {
   ArrowLeft,
   Check,
+  Eye,
+  EyeOff,
   ImagePlus,
   Lightbulb,
   Loader2,
@@ -20,6 +22,7 @@ const initialForm = {
   year: "",
   location: "",
   status: "ongoing",
+  published: true,
   problem: "",
   solution: "",
   implementation: "",
@@ -87,9 +90,10 @@ export default function InitiativeEditor() {
           year: item?.year || "",
           location: item?.location || "",
           status: item?.status || "ongoing",
+          published: item?.published === true,
           problem: item?.problem || "",
           solution: item?.solution || "",
-          
+
           implementation:
             item?.implementation || "",
           impact: item?.impact || "",
@@ -303,6 +307,11 @@ export default function InitiativeEditor() {
       );
 
       formData.append(
+        "published",
+        form.published ? "true" : "false"
+      );
+
+      formData.append(
         "problem",
         form.problem
       );
@@ -392,7 +401,7 @@ export default function InitiativeEditor() {
 
         <section className="mt-12 max-w-3xl">
           <div className="flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#073c32] text-[#e8d8b7]">
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#073c32] text-[#e8d8b7] shadow-[0_8px_20px_rgba(7,60,50,0.25)]">
               <Lightbulb size={15} />
             </span>
 
@@ -523,6 +532,13 @@ export default function InitiativeEditor() {
 
           <aside className="space-y-6">
 
+            <PublishToggle
+              published={form.published}
+              onChange={(value) =>
+                change("published", value)
+              }
+            />
+
             <ImageUploader
               title="Cover image"
               preview={coverPreview}
@@ -649,6 +665,67 @@ export default function InitiativeEditor() {
 }
 
 /* =========================================
+   PUBLISH TOGGLE
+========================================= */
+
+function PublishToggle({ published, onChange }) {
+  return (
+    <section
+      className={`rounded-[30px] border p-5 shadow-[0_20px_60px_rgba(7,60,50,0.06)] transition-colors ${
+        published
+          ? "border-[#0d5c4a]/25 bg-[#0d5c4a]/[0.04]"
+          : "border-[#b99350]/30 bg-[#b99350]/[0.06]"
+      }`}
+    >
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <span
+            className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors ${
+              published
+                ? "bg-[#0d5c4a] text-white"
+                : "bg-[#b99350] text-white"
+            }`}
+          >
+            {published ? (
+              <Eye size={15} />
+            ) : (
+              <EyeOff size={15} />
+            )}
+          </span>
+
+          <div>
+            <p className="text-sm font-bold">
+              {published ? "Published" : "Draft"}
+            </p>
+            <p className="mt-0.5 text-[11px] leading-4 text-[#6f7773]">
+              {published
+                ? "Visible on the public site."
+                : "Hidden from visitors."}
+            </p>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          role="switch"
+          aria-checked={published}
+          onClick={() => onChange(!published)}
+          className={`relative h-7 w-12 flex-shrink-0 rounded-full transition-colors duration-300 ${
+            published ? "bg-[#0d5c4a]" : "bg-[#101614]/15"
+          }`}
+        >
+          <span
+            className={`absolute top-1 h-5 w-5 rounded-full bg-white shadow-md transition-transform duration-300 ${
+              published ? "translate-x-6" : "translate-x-1"
+            }`}
+          />
+        </button>
+      </div>
+    </section>
+  );
+}
+
+/* =========================================
    IMAGE COMPONENTS
 ========================================= */
 
@@ -695,7 +772,7 @@ function ImageUploader({
           <button
             type="button"
             onClick={onRemove}
-            className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 shadow-lg"
+            className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 shadow-lg transition hover:scale-105"
           >
             <X size={15} />
           </button>
@@ -831,7 +908,7 @@ function ImageGrid({
             <img
               src={pickImageUrl(image?.url, image?.secure_url, image?.src, image) || ""}
               alt=""
-              className="aspect-square w-full object-cover"
+              className="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
             />
 
             <button
@@ -962,7 +1039,7 @@ function SaveButton({
     <button
       type="submit"
       disabled={saving}
-      className="flex w-full items-center justify-center gap-3 rounded-2xl bg-[#073c32] px-6 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition hover:bg-[#0d5c4a] disabled:cursor-not-allowed disabled:opacity-60"
+      className="flex w-full items-center justify-center gap-3 rounded-2xl bg-[#073c32] px-6 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition hover:-translate-y-0.5 hover:bg-[#0d5c4a] disabled:cursor-not-allowed disabled:opacity-60"
     >
       {saving ? (
         <Loader2
