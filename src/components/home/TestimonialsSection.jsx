@@ -43,6 +43,13 @@ const TESTIMONIALS = [
       "The most meaningful change in education is not about running another programme; it is about making the system stronger. Churu gives us an opportunity to work alongside schools and educators to help students become more confident, capable and ready for an uncertain future.",
     photo: "images/yatish-bedi.jfif",
   },
+   {
+  name: "Mayank Sharma",
+  designation: "Founder, Vultus-Go",
+  thought:
+    "A strong innovation ecosystem is built when young people are given the confidence, resources and freedom to turn their ideas into real solutions. The work happening through Churu is creating exactly that kind of environment.",
+  photo: "images/mayank.png",
+},
 ];
 
 /* ============================================================================
