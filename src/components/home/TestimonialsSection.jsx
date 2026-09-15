@@ -9,51 +9,38 @@ import { Quote, ChevronLeft, ChevronRight, Sparkles, Heart } from "lucide-react"
 
 const TESTIMONIALS = [
   {
-    name: "Rajendra Poonia",
-    designation: "Additional District Collector, Churu",
-    thought: "In every review meeting, he pushes us to ask one question first — does this actually reach the last citizen? That single habit has changed how the district works.",
+    name: "Dr. Santosh Kumar Maharshi",
+    designation: "Chief District Education Officer (CDEO), Churu",
+    thought:
+      "Code Churu has shown what becomes possible when technology education is taken beyond infrastructure and brought directly to government-school students. The focus on practical, future-ready skills is creating opportunities for students across the district.",
     photo: "/dm.jpeg",
   },
   {
-    name: "Kavita Sharma",
-    designation: "Chief Education Officer, Churu",
-    thought: "He doesn't just approve education programs, he visits the classrooms. Code Churu exists because he sat with students before he sat with officers.",
+    name: "Gaurav Kumar Sharma",
+    designation: "Computer Instructor, Chief Mentor of CodeChuru",
+    thought:
+      "Innovation becomes meaningful when students get the opportunity to build, experiment and solve real problems. Creating stronger exposure to technology and tinkering can help students discover abilities they may never have known they had.",
     photo: "/dm.jpeg",
   },
   {
-    name: "Mahaveer Prasad Jangid",
-    designation: "Sarpanch, Ratangarh Panchayat",
-    thought: "Most officers post from their office. This DM Sahab comes to our village, sits on the same charpai, and actually listens before deciding.",
+    name: "Rakesh Sehgal",
+    designation: "Co-Founder & Director, CodeYogi Foundation",
+    thought:
+      "Churu is proving that a student's access to technology should not depend on whether their school has a computer lab. When students can learn, build and create using the resources already in their hands, talent from every corner can get a fair opportunity.",
     photo: "/dm.jpeg",
   },
   {
-    name: "Dr. Anjali Meghwal",
-    designation: "Chief Medical & Health Officer, Churu",
-    thought: "During every health drive, he wants numbers from the field by evening, not next week. That urgency is now part of how our department thinks.",
+    name: "Vinod Kumari",
+    designation: "ACP (Dy. Director), OIC, iStart Churu",
+    thought:
+      "The real strength of an innovation ecosystem is created when students and young founders are given the confidence to turn ideas into action. Churu is steadily building that culture by connecting young people with entrepreneurship, mentorship and opportunities.",
     photo: "/dm.jpeg",
   },
   {
-    name: "Suresh Kumar Saini",
-    designation: "President, Churu Traders' Association",
-    thought: "He's the first Collector who called a trader meeting to ask what we needed, instead of announcing what we'd get. That's a different kind of governance.",
-    photo: "/dm.jpeg",
-  },
-  {
-    name: "Neha Choudhary",
-    designation: "Founder, Rural Innovation Cell",
-    thought: "When we pitched a district innovation lab, he asked for a working prototype in a month — not a proposal in a year. It's running today.",
-    photo: "/dm.jpeg",
-  },
-  {
-    name: "Vikram Singh Rathore",
-    designation: "Superintendent of Police, Churu (Coordination Desk)",
-    thought: "Whenever administration and police need to move together, he's the one who picks up the phone directly instead of routing it through five desks.",
-    photo: "/dm.jpeg",
-  },
-  {
-    name: "Pooja Vyas",
-    designation: "Principal, Government Girls Sr. Sec. School",
-    thought: "He asked our girls what they wanted to build, not what we thought they should learn. That respect is rare, and the students feel it.",
+    name: "Yatish Bedi",
+    designation: "Co-Founder, Foundation for Innovation and Action (FIA)",
+    thought:
+      "The most meaningful change in education is not about running another programme; it is about making the system stronger. Churu gives us an opportunity to work alongside schools and educators to help students become more confident, capable and ready for an uncertain future.",
     photo: "/dm.jpeg",
   },
 ];
