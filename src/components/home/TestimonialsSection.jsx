@@ -12,44 +12,44 @@ const TESTIMONIALS = [
     name: "Dr. Santosh Kumar Maharshi",
     designation: "Chief District Education Officer (CDEO), Churu",
     thought:
-      "Code Churu has shown what becomes possible when technology education is taken beyond infrastructure and brought directly to government-school students. The focus on practical, future-ready skills is creating opportunities for students across the district.",
+      "Abhishek Surana Sir brings a rare sense of purpose to public administration. His approach to education is not limited to meetings and files; he consistently focuses on what can create a real difference for students and schools on the ground.",
     photo: "images/santosh-maharshi.jfif",
   },
   {
     name: "Gaurav Kumar Sharma",
-    designation: "Computer Instructor, Chief Mentor of CodeChuru",
+    designation: "Computer Instructor & Chief Mentor, CodeChuru",
     thought:
-      "Innovation becomes meaningful when students get the opportunity to build, experiment and solve real problems. Creating stronger exposure to technology and tinkering can help students discover abilities they may never have known they had.",
+      "What sets Abhishek Surana Sir apart is his willingness to trust young people with responsibility. He encourages ideas, asks for execution rather than promises, and creates an environment where students and young innovators feel confident enough to build something meaningful.",
     photo: "images/gaurav-sharma.jfif",
   },
   {
     name: "Rakesh Sehgal",
     designation: "Co-Founder & Director, CodeYogi Foundation",
     thought:
-      "Churu is proving that a student's access to technology should not depend on whether their school has a computer lab. When students can learn, build and create using the resources already in their hands, talent from every corner can get a fair opportunity.",
+      "Abhishek Surana Sir understands that meaningful governance is about creating access and opportunity. His ability to connect administration with people working on the ground makes it possible to turn good ideas into initiatives that can genuinely reach the communities they are meant to serve.",
     photo: "images/rakesh-sehgal.jfif",
   },
   {
     name: "Vinod Kumari",
     designation: "ACP (Dy. Director), OIC, iStart Churu",
     thought:
-      "The real strength of an innovation ecosystem is created when students and young founders are given the confidence to turn ideas into action. Churu is steadily building that culture by connecting young people with entrepreneurship, mentorship and opportunities.",
+      "Working with Abhishek Surana Sir feels different because he gives innovation the importance it deserves within governance. He is open to new ideas, encourages young entrepreneurs and consistently looks for practical ways to turn possibilities into action.",
     photo: "images/vinod-kumari.jfif",
   },
   {
     name: "Yatish Bedi",
     designation: "Co-Founder, Foundation for Innovation and Action (FIA)",
     thought:
-      "The most meaningful change in education is not about running another programme; it is about making the system stronger. Churu gives us an opportunity to work alongside schools and educators to help students become more confident, capable and ready for an uncertain future.",
+      "Abhishek Surana Sir has a strong understanding that sustainable change comes from empowering people, not simply introducing programmes. His focus on collaboration, ownership and measurable outcomes makes his initiatives much more likely to create lasting impact.",
     photo: "images/yatish-bedi.jfif",
   },
-   {
-  name: "Mayank Sharma",
-  designation: "Founder, Vultus-Go",
-  thought:
-    "A strong innovation ecosystem is built when young people are given the confidence, resources and freedom to turn their ideas into real solutions. The work happening through Churu is creating exactly that kind of environment.",
-  photo: "images/mayank.png",
-},
+  {
+    name: "Mayank Sharma",
+    designation: "Founder, Vultus-Go",
+    thought:
+      "Abhishek Surana Sir has a remarkable ability to recognise potential and give people the opportunity to act on it. His leadership creates a culture where young innovators are encouraged to think beyond conventional solutions and contribute meaningfully to the community.",
+    photo: "images/mayank.png",
+  },
 ];
 
 /* ============================================================================
