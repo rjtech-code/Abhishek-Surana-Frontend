@@ -89,7 +89,7 @@ export default function Home() {
 
       <BootcampStartups />
 
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       {/* =========================
           LATEST STORIES
       ========================= */}
