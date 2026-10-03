@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import initiativeService from "../services/initiative.service";
 import { pickImageUrl } from "../utils/image";
 
+
 const EASE = [0.16, 1, 0.3, 1];
 
 export default function Initiatives() {

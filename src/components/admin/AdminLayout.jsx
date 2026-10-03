@@ -12,7 +12,10 @@ import {
   ChevronRight,
   ShieldCheck,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+import { Mail } from "lucide-react";
+import contactService from "../../services/contact.service";
 
 const navigation = [
   {
@@ -44,6 +47,8 @@ const navigation = [
         path: "/admin/gallery",
         icon: Images,
       },
+
+      { label: "Messages", path: "/admin/messages", icon: Mail, badge: true },
     ],
   },
 ];
@@ -51,6 +56,24 @@ const navigation = [
 export default function AdminLayout() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate();
+
+  const [unread, setUnread] = useState(0);
+
+  useEffect(() => {
+    let on = true;
+    const load = async () => {
+      try {
+        const r = await contactService.getUnreadCount();
+        if (on) setUnread(r?.data?.count ?? r?.count ?? 0);
+      } catch { }
+    };
+    load();
+    window.addEventListener("messages:changed", load);
+    return () => {
+      on = false;
+      window.removeEventListener("messages:changed", load);
+    };
+  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("adminToken");
@@ -99,6 +122,7 @@ export default function AdminLayout() {
                     key={item.path}
                     item={item}
                     onNavigate={() => setMobileOpen(false)}
+                    badge={item.badge ? unread : 0}
                   />
                 ))}
               </div>
@@ -190,6 +214,7 @@ export default function AdminLayout() {
                           key={item.path}
                           item={item}
                           onNavigate={() => setMobileOpen(false)}
+                          badge={item.badge ? unread : 0}
                         />
                       ))}
                     </div>
@@ -259,7 +284,7 @@ export default function AdminLayout() {
   );
 }
 
-function AdminNavItem({ item, onNavigate }) {
+function AdminNavItem({ item, onNavigate, badge = 0 }) {
   const Icon = item.icon;
 
   return (
@@ -268,10 +293,9 @@ function AdminNavItem({ item, onNavigate }) {
       end={item.end}
       onClick={onNavigate}
       className={({ isActive }) =>
-        `group flex items-center justify-between rounded-xl px-3.5 py-3 text-xs font-medium transition-all ${
-          isActive
-            ? "bg-[#f4f1e9] text-[#073c32] shadow-sm"
-            : "text-white/50 hover:bg-white/[0.06] hover:text-white"
+        `group flex items-center justify-between rounded-xl px-3.5 py-3 text-xs font-medium transition-all ${isActive
+          ? "bg-[#f4f1e9] text-[#073c32] shadow-sm"
+          : "text-white/50 hover:bg-white/[0.06] hover:text-white"
         }`
       }
     >
@@ -279,11 +303,10 @@ function AdminNavItem({ item, onNavigate }) {
         <>
           <span className="flex items-center gap-3">
             <span
-              className={`flex h-8 w-8 items-center justify-center rounded-lg transition ${
-                isActive
-                  ? "bg-[#073c32] text-[#e8d8b7]"
-                  : "bg-white/[0.04]"
-              }`}
+              className={`flex h-8 w-8 items-center justify-center rounded-lg transition ${isActive
+                ? "bg-[#073c32] text-[#e8d8b7]"
+                : "bg-white/[0.04]"
+                }`}
             >
               <Icon size={15} />
             </span>
@@ -291,9 +314,14 @@ function AdminNavItem({ item, onNavigate }) {
             {item.label}
           </span>
 
-          {isActive && (
-            <ChevronRight size={13} />
-          )}
+          <span className="flex items-center gap-2">
+            {badge > 0 && (
+              <span className="rounded-full bg-[#d5b978] px-2 py-0.5 text-[9px] font-bold text-[#073c32]">
+                {badge}
+              </span>
+            )}
+            {isActive && <ChevronRight size={13} />}
+          </span>
         </>
       )}
     </NavLink>

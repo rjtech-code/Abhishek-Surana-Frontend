@@ -11,7 +11,10 @@ import gratitudeEvents from "../data/gratitudeEvents";
 
 import blogService from "../services/blog.service";
 import BootcampStartups from "../components/home/BootcampStartups";
-import TestimonialsSection from "../components/home/TestimonialsSection";
+
+
+import SkochAchievement from "../components/home/SkochAchievement";
+
 
 const HOME_BLOG_LIMIT = 4;
 
@@ -86,6 +89,9 @@ export default function Home() {
         backgroundImage="/leaf-background.png"
         events={gratitudeEvents}
       />
+
+
+<SkochAchievement /> 
 
       <BootcampStartups />
 

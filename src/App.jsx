@@ -28,6 +28,13 @@ import dmPhoto from "/dm-sir.png";
 import codeChuruLogo from "/code-churu-logo.png";
 import AboutAbhishekSurana from "./pages/AboutAbhishekSurana";
 
+import Contact from "./pages/Contact";
+import ManageMessages from "./pages/admin/ManageMessages";
+
+
+
+
+
 export default function App() {
   const [showIntro, setShowIntro] = useState(true);
 
@@ -90,6 +97,10 @@ function AppRoutes() {
         />
 
         <Route path="/gallery" element={<Gallery />} />
+
+        <Route path="/contact" element={<Contact />} />
+
+      
       </Route>
 
       {/* ================= ADMIN LOGIN ================= */}
@@ -147,6 +158,8 @@ function AppRoutes() {
             path="/admin/gallery/new"
             element={<GalleryUploader />}
           />
+
+          <Route path="/admin/messages" element={<ManageMessages />} />
         </Route>
       </Route>
 

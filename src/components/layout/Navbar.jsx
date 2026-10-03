@@ -9,6 +9,8 @@ import {
   Images,
   Landmark,
   LandPlot,
+  Mail,
+ 
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
@@ -39,6 +41,7 @@ const links = [
     path: "/gallery",
     icon: Images,
   },
+ { label: "Contact", path: "/contact", icon: Mail },
 ];
 
 export default function Navbar() {
