@@ -96,17 +96,22 @@ export default function VisualStory() {
       </div>
 
       {/* doodles */}
-      <Sparkles
+      <motion.span
         aria-hidden="true"
-        size={26}
+        animate={{ y: [0, -10, 0], rotate: [0, 12, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         className="absolute left-[6%] top-24 hidden text-[#d5b978] sm:block"
-      />
-      <Heart
+      >
+        <Sparkles size={26} />
+      </motion.span>
+      <motion.span
         aria-hidden="true"
-        size={22}
-        strokeWidth={1.5}
-        className="absolute right-[8%] top-44 rotate-12 text-[#d5b978]"
-      />
+        animate={{ y: [0, 8, 0], scale: [1, 1.15, 1] }}
+        transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute right-[6%] top-40 text-[#d5b978] sm:right-[8%]"
+      >
+        <Heart size={22} strokeWidth={1.5} />
+      </motion.span>
 
       <div className="relative mx-auto max-w-[1300px]">
         {/* ===== Header ===== */}
@@ -166,7 +171,7 @@ export default function VisualStory() {
             <EmptyStory />
           ) : (
             <>
-              <div className="grid gap-6 lg:grid-cols-12 lg:grid-rows-[270px_270px]">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-12 lg:grid-rows-[270px_270px]">
                 {images[0] && (
                   <Polaroid
                     item={images[0]}
@@ -175,7 +180,7 @@ export default function VisualStory() {
                     tape
                     large
                     onOpen={() => setActive(0)}
-                    className="aspect-[4/3] lg:col-span-7 lg:row-span-2 lg:aspect-auto"
+                    className="aspect-[4/3] md:col-span-2 md:aspect-[16/9] lg:col-span-7 lg:row-span-2 lg:aspect-auto"
                   />
                 )}
 
@@ -211,7 +216,7 @@ export default function VisualStory() {
                       tilt={TILTS[i + 3]}
                       small
                       onOpen={() => setActive(i + 3)}
-                      className="aspect-[4/3.4]"
+                      className={i === 2 ? "col-span-2 aspect-[16/10] sm:col-span-1 sm:aspect-[4/3.4]" : "aspect-[4/3.4]"}
                     />
                   ))}
                 </div>
@@ -286,7 +291,7 @@ function Polaroid({
       whileTap={{ scale: 0.99 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.9, delay: (index % 3) * 0.08, ease: EASE }}
-      className={`group relative flex flex-col rounded-[28px] bg-white p-2.5 text-left shadow-[0_18px_45px_rgba(7,60,50,0.10)] ring-1 ring-black/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d5b978] ${className}`}
+      className={`group relative flex w-full min-w-0 flex-col rounded-[22px] bg-white p-2 text-left sm:rounded-[28px] sm:p-2.5 shadow-[0_18px_45px_rgba(7,60,50,0.10)] ring-1 ring-black/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d5b978] ${className}`}
     >
       {tape && (
         <span className="absolute -top-2.5 left-1/2 z-10 h-5 w-16 -translate-x-1/2 -rotate-3 rounded-sm bg-[#e8d8b7]/90 shadow-sm" />
@@ -303,7 +308,7 @@ function Polaroid({
 
       <div className="flex items-center justify-between gap-3 px-2.5 pb-1 pt-3">
         <p
-          className={`truncate font-editorial italic leading-none text-[#073c32] ${
+          className={`min-w-0 flex-1 truncate font-editorial italic leading-none text-[#073c32] ${
             large ? "text-2xl" : small ? "text-base" : "text-xl"
           }`}
         >
@@ -469,7 +474,7 @@ function Lightbox({ items, index, onClose, onNav }) {
 
 function StorySkeleton() {
   return (
-    <div className="grid gap-6 lg:grid-cols-12">
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
       <div className="h-[420px] animate-pulse rounded-[28px] bg-[#e9e5da] lg:col-span-7 lg:h-[564px]" />
       <div className="flex flex-col gap-6 lg:col-span-5">
         <div className="h-[200px] animate-pulse rounded-[28px] bg-[#e9e5da] lg:h-[270px]" />
@@ -495,4 +500,5 @@ function EmptyStory() {
       </p>
     </div>
   );
-}
+    }
+    
